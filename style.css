@@ -436,3 +436,25 @@ body {
   color: white;
   font-weight: 600;
 }
+
+.page-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0.35rem;
+}
+
+@media (max-width: 520px) {
+  .page-btn.number-btn {
+    display: none;
+  }
+
+  .page-info {
+    display: inline;
+  }
+}
+
+@media (min-width: 521px) {
+  .page-info {
+    display: none;
+  }
+}

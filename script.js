@@ -173,10 +173,15 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     paginationEl.appendChild(prevBtn);
 
+    const pageInfo = document.createElement("span");
+    pageInfo.className = "page-info";
+    pageInfo.textContent = `${currentPage} / ${totalPages}`;
+    paginationEl.appendChild(pageInfo);
+
     for (let p = 1; p <= totalPages; p++) {
       const btn = document.createElement("button");
       btn.textContent = p;
-      btn.className = "page-btn" + (p === currentPage ? " active" : "");
+      btn.className = "page-btn number-btn" + (p === currentPage ? " active" : "");
       btn.onclick = () => {
         currentPage = p;
         renderList(paginate(filteredItems));
@@ -199,7 +204,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     paginationEl.appendChild(nextBtn);
   }
-
 
   function speakTerm(rawTerm) {
     if (!("speechSynthesis" in window)) {
