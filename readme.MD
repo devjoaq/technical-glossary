@@ -1,5 +1,7 @@
 # 📘 Technical English Glossary
 
+![Preview del proyecto](./assets/preview.png)
+
 Aplicación web creada para la materia **Inglés Técnico – Analista de Sistemas**.  
 Incluye un glosario de términos informáticos en inglés, sus traducciones al español y pronunciación automática usando la **Web Speech API**.
 
